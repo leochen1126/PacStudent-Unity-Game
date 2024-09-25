@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -53,13 +53,13 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -109,10 +109,10 @@ TextureImporter:
       name: Pacstu-Moving up and down_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 69
-        width: 29
-        height: 22
+        x: 1
+        y: 70
+        width: 27
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,10 +130,10 @@ TextureImporter:
       name: Pacstu-Moving up and down_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 37
-        width: 29
-        height: 22
+        x: 1
+        y: 38
+        width: 27
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +151,10 @@ TextureImporter:
       name: Pacstu-Moving up and down_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 29
-        height: 22
+        x: 1
+        y: 6
+        width: 27
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,14 +171,17 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 730c0e213371f8c41908725d632be0d0
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pacstu-Moving up and down_0: -6774027055739129980
+      Pacstu-Moving up and down_1: -7827542348783014334
+      Pacstu-Moving up and down_2: 7174985294452085260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
