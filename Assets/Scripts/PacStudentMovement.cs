@@ -30,6 +30,11 @@ public class PacStudentMovement : MonoBehaviour
         animator.SetFloat("MoveX", movement.x);
         animator.SetFloat("MoveY", movement.y);
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            // Trigger the death animation
+            animator.SetTrigger("Dead");
+        }
         // Move PacStudent
         transform.position += new Vector3(movement.x, movement.y, 0) * moveSpeed * Time.deltaTime;
     }

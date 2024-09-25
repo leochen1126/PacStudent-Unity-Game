@@ -245,6 +245,8 @@ GameObject:
   - component: {fileID: 1159397017}
   - component: {fileID: 1159397016}
   - component: {fileID: 1159397015}
+  - component: {fileID: 1159397019}
+  - component: {fileID: 1159397018}
   m_Layer: 0
   m_Name: Ghost1
   m_TagString: Untagged
@@ -337,12 +339,38 @@ Transform:
   m_GameObject: {fileID: 1159397014}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1159397018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159397014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bcfa85e8214ec47a4cd1775f44f898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1159397019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159397014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb2f927ac48e9c4e858c2b0b85e0c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  directionChangeInterval: 1
 --- !u!1 &1248908509
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +382,8 @@ GameObject:
   - component: {fileID: 1248908512}
   - component: {fileID: 1248908511}
   - component: {fileID: 1248908510}
+  - component: {fileID: 1248908514}
+  - component: {fileID: 1248908513}
   m_Layer: 0
   m_Name: Ghost3
   m_TagString: Untagged
@@ -446,12 +476,38 @@ Transform:
   m_GameObject: {fileID: 1248908509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248908513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248908509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bcfa85e8214ec47a4cd1775f44f898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1248908514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248908509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb2f927ac48e9c4e858c2b0b85e0c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  directionChangeInterval: 1
 --- !u!1 &1434504740
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +519,8 @@ GameObject:
   - component: {fileID: 1434504743}
   - component: {fileID: 1434504742}
   - component: {fileID: 1434504741}
+  - component: {fileID: 1434504745}
+  - component: {fileID: 1434504744}
   m_Layer: 0
   m_Name: Ghost4
   m_TagString: Untagged
@@ -561,6 +619,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1434504744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434504740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bcfa85e8214ec47a4cd1775f44f898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1434504745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434504740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb2f927ac48e9c4e858c2b0b85e0c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  directionChangeInterval: 1
 --- !u!1 &1821587630
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +656,7 @@ GameObject:
   - component: {fileID: 1821587633}
   - component: {fileID: 1821587632}
   - component: {fileID: 1821587631}
+  - component: {fileID: 1821587634}
   m_Layer: 0
   m_Name: PacStudent
   m_TagString: Untagged
@@ -644,12 +729,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7827542348783014334, guid: be3e97cad5a27d44a8da321acbd77167, type: 3}
+  m_Sprite: {fileID: -8568177232220992887, guid: 59bfc29c06658e24caecf70c84d12c9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.28, y: 0.2}
+  m_Size: {x: 0.84375, y: 0.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -664,12 +749,25 @@ Transform:
   m_GameObject: {fileID: 1821587630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821587634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821587630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a59d1369d40de4089404f88bac8f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
 --- !u!1 &1993365200
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +871,7 @@ Transform:
   m_GameObject: {fileID: 1993365200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,6 +888,8 @@ GameObject:
   - component: {fileID: 2038175753}
   - component: {fileID: 2038175752}
   - component: {fileID: 2038175751}
+  - component: {fileID: 2038175755}
+  - component: {fileID: 2038175754}
   m_Layer: 0
   m_Name: Ghost2
   m_TagString: Untagged
@@ -882,12 +982,38 @@ Transform:
   m_GameObject: {fileID: 2038175750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2038175754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038175750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bcfa85e8214ec47a4cd1775f44f898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2038175755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038175750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb2f927ac48e9c4e858c2b0b85e0c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  directionChangeInterval: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
