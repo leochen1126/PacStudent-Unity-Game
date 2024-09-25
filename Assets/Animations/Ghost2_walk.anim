@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PowerPellet_Flash
+  m_Name: Ghost2_walk
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -671317945438955680, guid: 23f484058b9866547a797ea62e8fef58, type: 3}
+      value: {fileID: 4456494643849357012, guid: 4f14ffd797e69d54a8e1cc4b117556d2, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -671317945438955680, guid: 23f484058b9866547a797ea62e8fef58, type: 3}
+    - {fileID: 4456494643849357012, guid: 4f14ffd797e69d54a8e1cc4b117556d2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
