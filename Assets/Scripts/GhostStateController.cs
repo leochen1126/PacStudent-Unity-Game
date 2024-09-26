@@ -4,39 +4,32 @@ using UnityEngine;
 
 public class GhostStateController : MonoBehaviour
 {
-    private Animator animator;   // Reference to the Animator
-    private GhostMovement ghostMovement;  // Reference to the GhostMovement script
+    private Animator animator;   
+    private GhostMovement ghostMovement;  
 
     void Start()
     {
-        // Get the Animator component attached to the ghost
         animator = GetComponent<Animator>();
-
-        // Get the GhostMovement script attached to the same GameObject
         ghostMovement = GetComponent<GhostMovement>();
     }
 
     void Update()
     {
-        // Check if the 'Y' key is pressed to trigger the Scared state and stop movement
+        // press Y into ghost scared mode, press U into ghost dead mode, press I to recover
         if (Input.GetKeyDown(KeyCode.Y))
         {
             animator.SetTrigger("Scared");
-            ghostMovement.canMove = false;  // Stop the ghost from moving
+            ghostMovement.canMove = false; 
         }
-
-        // Check if the 'U' key is pressed to trigger the Dead state and stop movement
         if (Input.GetKeyDown(KeyCode.U))
         {
             animator.SetTrigger("Dead");
-            ghostMovement.canMove = false;  // Stop the ghost from moving
+            ghostMovement.canMove = false; 
         }
-
-        // Check if the 'I' key is pressed to resume movement
         if (Input.GetKeyDown(KeyCode.I))
         {
             animator.SetTrigger("Recover");
-            ghostMovement.canMove = true;   // Allow the ghost to move again
+            ghostMovement.canMove = true;   
         }
     }
 }

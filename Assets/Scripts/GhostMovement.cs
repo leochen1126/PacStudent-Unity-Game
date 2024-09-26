@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
-    public float moveSpeed = 3f;             // Speed of ghost movement
-    public float directionChangeInterval = 2f; // How often the ghost changes direction
-    private Vector2 direction;               // Current movement direction
+    public float moveSpeed = 3f;             
+    public float directionChangeInterval = 2f; 
+    private Vector2 direction;               
     private float timeSinceLastChange = 0f;
-    private Animator animator;               // Reference to the Animator
+    private Animator animator;              
 
-    public bool canMove = true;              // Control whether the ghost can move
+    public bool canMove = true;              // Control ghost can move
 
     void Start()
     {
-        // Get the Animator component attached to the ghost
         animator = GetComponent<Animator>();
-
-        // Pick an initial random direction
         PickRandomDirection();
     }
 
@@ -25,14 +22,10 @@ public class GhostMovement : MonoBehaviour
     {
         if (canMove)
         {
-            // Move the ghost in the current direction
             transform.position += new Vector3(direction.x, direction.y, 0) * moveSpeed * Time.deltaTime;
-
-            // Update the Animator parameters for direction
             animator.SetFloat("MoveX", direction.x);
             animator.SetFloat("MoveY", direction.y);
 
-            // Change direction after a set interval
             timeSinceLastChange += Time.deltaTime;
             if (timeSinceLastChange >= directionChangeInterval)
             {
@@ -42,7 +35,7 @@ public class GhostMovement : MonoBehaviour
         }
     }
 
-    // Pick a random direction (up, down, left, or right)
+    // Walk a random direction (up, down, left, or right)
     void PickRandomDirection()
     {
         int randomDir = Random.Range(0, 4);
