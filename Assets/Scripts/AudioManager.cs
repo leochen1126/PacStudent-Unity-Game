@@ -11,24 +11,24 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        // Start by playing the intro music
+        
         PlayIntroMusic();
     }
 
-    // Function to play intro music
     public void PlayIntroMusic()
     {
-        musicSource.clip = introMusic;  // Set intro music clip
-        musicSource.Play();             // Play intro music
-        Invoke("PlayNormalGhostStateMusic", introMusic.length);  // After intro ends, play normal music
+        musicSource.clip = introMusic;  
+        musicSource.Play();             
+        Invoke("PlayNormalGhostStateMusic", introMusic.length);  
     }
 
-    // Function to play normal ghost state music
+    
     public void PlayNormalGhostStateMusic()
     {
-        musicSource.clip = normalGhostStateMusic;  // Set normal ghost music
-        musicSource.Play();                        // Play normal ghost music
-        musicSource.loop = true;                   // Set it to loop
+        musicSource.clip = normalGhostStateMusic;  
+        musicSource.Play();      
+        
+        musicSource.loop = true;                   
     }
 }
 

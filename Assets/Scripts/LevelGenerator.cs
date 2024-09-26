@@ -12,7 +12,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject powerPelletPrefab;
     public GameObject tJunctionPrefab;
 
-    public int[,] levelMap =
+    public int[,] levelNewMap =
     {
         {1,2,2,2,2,2,2,2,2,2,2,2,2,7},
         {2,5,5,5,5,5,5,5,5,5,5,5,5,4},
@@ -31,20 +31,17 @@ public class LevelGenerator : MonoBehaviour
         {0,0,0,0,0,0,5,0,0,0,4,0,0,0}
     };
 
-    public float tileSize = 1f;  // Size of each tile in Unity units
+    public float tileSize = 1f; 
 
     void Start()
     {
-        // Delete existing level layout (if any)
-        DeleteExistingLevel();
-
-        // Generate the level based on the levelMap array
+        DeleteExistingLevel();// Disable current level
+        // Generate the level based on the levelNewMap array
         GenerateLevel();
     }
 
     void DeleteExistingLevel()
     {
-        // Remove all objects tagged as "Level" in the scene
         GameObject[] existingLevelPieces = GameObject.FindGameObjectsWithTag("Level");
         foreach (GameObject piece in existingLevelPieces)
         {
@@ -54,24 +51,20 @@ public class LevelGenerator : MonoBehaviour
 
     void GenerateLevel()
     {
-        for (int y = 0; y < levelMap.GetLength(0); y++)
+        for (int y = 0; y < levelNewMap.GetLength(0); y++)
         {
-            for (int x = 0; x < levelMap.GetLength(1); x++)
+            for (int x = 0; x < levelNewMap.GetLength(1); x++)
             {
-                Vector3 position = new Vector3(x * tileSize, -y * tileSize, 0); // Calculate the position for each tile
-                PlaceTile(levelMap[y, x], position);
+                Vector3 position = new Vector3(x * tileSize, -y * tileSize, 0); 
+                PlaceTile(levelNewMap[y, x], position);
             }
         }
-
-        // After generating the top-left quadrant, mirror it horizontally and vertically
         MirrorLevel();
     }
 
     void PlaceTile(int tileID, Vector3 position)
     {
         GameObject tilePrefab = null;
-
-        // Choose the appropriate prefab based on tileID
         switch (tileID)
         {
             case 1: tilePrefab = outsideCornerPrefab; break;
@@ -85,7 +78,6 @@ public class LevelGenerator : MonoBehaviour
 
         if (tilePrefab != null)
         {
-            // Instantiate the tile and assign the "Level" tag so it can be easily deleted
             GameObject tile = Instantiate(tilePrefab, position, Quaternion.identity);
             tile.tag = "Level";
         }
@@ -93,22 +85,22 @@ public class LevelGenerator : MonoBehaviour
 
     void MirrorLevel()
     {
-        int originalWidth = levelMap.GetLength(1);
-        int originalHeight = levelMap.GetLength(0);
+        int oldWidth = levelNewMap.GetLength(1);
+        int oldHeight = levelNewMap.GetLength(0);
 
-        for (int y = 0; y < originalHeight; y++)
+        for (int y = 0; y < oldHeight; y++)
         {
-            for (int x = 0; x < originalWidth; x++)
+            for (int x = 0; x < oldWidth; x++)
             {
-                Vector3 position = new Vector3((originalWidth + x) * tileSize, -y * tileSize, 0); // Shift right
-                PlaceTile(levelMap[y, x], position);
+                Vector3 position = new Vector3((oldWidth + x) * tileSize, -y * tileSize, 0); 
+                PlaceTile(levelNewMap[y, x], position);
             }
         }
     }
     void AdjustCamera()
     {
-        Camera.main.orthographicSize = levelMap.GetLength(0) * tileSize / 2;
-        Camera.main.transform.position = new Vector3(levelMap.GetLength(1) * tileSize / 2, -levelMap.GetLength(0) * tileSize / 2, -10);
+        Camera.main.orthographicSize = levelNewMap.GetLength(0) * tileSize / 2;
+        Camera.main.transform.position = new Vector3(levelNewMap.GetLength(1) * tileSize / 2, -levelNewMap.GetLength(0) * tileSize / 2, -10);
     }
 
 }
