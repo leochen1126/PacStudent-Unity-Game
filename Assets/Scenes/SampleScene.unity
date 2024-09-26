@@ -10754,7 +10754,7 @@ GameObject:
   - component: {fileID: 487959914}
   m_Layer: 0
   m_Name: Top-left
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11560,7 +11560,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 16.242
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11585,7 +11585,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 5.4, y: -9.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11934,7 +11934,7 @@ GameObject:
   - component: {fileID: 529208104}
   m_Layer: 0
   m_Name: Top-right
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24814,7 +24814,7 @@ Transform:
   m_GameObject: {fileID: 1159397014}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 3.95, y: -9.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25912,7 +25912,7 @@ GameObject:
   - component: {fileID: 1195695747}
   m_Layer: 0
   m_Name: bottum-left (1)
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27071,7 +27071,7 @@ Transform:
   m_GameObject: {fileID: 1248908509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 6.93, y: -9.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30247,7 +30247,7 @@ Transform:
   m_GameObject: {fileID: 1434504740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.18, y: -9.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30973,7 +30973,7 @@ GameObject:
   - component: {fileID: 1463454785}
   m_Layer: 0
   m_Name: buttum-right (1)
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37463,7 +37463,7 @@ Transform:
   m_GameObject: {fileID: 1821587630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: -6.41, y: 3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37482,6 +37482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  corners: []
 --- !u!1001 &1824254015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40127,7 +40128,7 @@ Transform:
   m_GameObject: {fileID: 1993365200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: -6.47, y: 1.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41044,7 +41045,7 @@ Transform:
   m_GameObject: {fileID: 2038175750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 5.16, y: -9.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42937,6 +42938,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2893266267304037737, guid: 1100a580d1c977541b8e6cc6e83b9a36, type: 3}
   m_PrefabInstance: {fileID: 2137069508}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2141609422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141609424}
+  - component: {fileID: 2141609423}
+  m_Layer: 0
+  m_Name: 'LevelManager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2141609423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141609422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae173881433de4b8711e16b47ffb7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outsideCornerPrefab: {fileID: 1190610598808331048, guid: 738ec362a1d19b74fabfb885f3bfd407, type: 3}
+  outsideWallPrefab: {fileID: 1531525324758606675, guid: 12ea9eaeb89384a42ac3e6c40e4695ef, type: 3}
+  insideCornerPrefab: {fileID: 5005837601033595357, guid: 90f0523a5cb91c446a26f80373c510a5, type: 3}
+  insideWallPrefab: {fileID: 8503841703028579091, guid: 1100a580d1c977541b8e6cc6e83b9a36, type: 3}
+  pelletPrefab: {fileID: 4829655970718958457, guid: d50bd7231296ded4fbf0d0f510219308, type: 3}
+  powerPelletPrefab: {fileID: 3797793184025426340, guid: 8fbdd82357d8d4d4f9305deea097cc45, type: 3}
+  tJunctionPrefab: {fileID: 8351730333469441566, guid: bf9e3cf780ef54940b40ec74855c52f4, type: 3}
+  tileSize: 2
+--- !u!4 &2141609424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141609422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5686706, y: -0.42357612, z: -0.011286362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2145316817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43133,9 +43186,10 @@ SceneRoots:
   - {fileID: 1993365203}
   - {fileID: 1159397017}
   - {fileID: 2038175753}
+  - {fileID: 1248908512}
+  - {fileID: 1434504743}
+  - {fileID: 2141609424}
   - {fileID: 487959914}
   - {fileID: 529208104}
   - {fileID: 1463454785}
   - {fileID: 1195695747}
-  - {fileID: 1248908512}
-  - {fileID: 1434504743}
