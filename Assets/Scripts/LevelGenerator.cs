@@ -30,13 +30,11 @@ public class LevelGenerator : MonoBehaviour
         {2,2,2,2,2,1,5,3,3,0,4,0,0,0},
         {0,0,0,0,0,0,5,0,0,0,4,0,0,0}
     };
-
-    public float tileSize = 1f; 
+    public float tileSize = 1f;
 
     void Start()
     {
-        DeleteExistingLevel();// Disable current level
-        // Generate the level based on the levelNewMap array
+        DeleteExistingLevel();
         GenerateLevel();
     }
 
@@ -55,16 +53,18 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int x = 0; x < levelNewMap.GetLength(1); x++)
             {
-                Vector3 position = new Vector3(x * tileSize, -y * tileSize, 0); 
+                Vector3 position = new Vector3(x * tileSize, -y * tileSize, 0);
                 PlaceTile(levelNewMap[y, x], position);
             }
         }
+
         MirrorLevel();
     }
 
     void PlaceTile(int tileID, Vector3 position)
     {
         GameObject tilePrefab = null;
+
         switch (tileID)
         {
             case 1: tilePrefab = outsideCornerPrefab; break;
@@ -85,15 +85,16 @@ public class LevelGenerator : MonoBehaviour
 
     void MirrorLevel()
     {
-        int oldWidth = levelNewMap.GetLength(1);
-        int oldHeight = levelNewMap.GetLength(0);
-
-        for (int y = 0; y < oldHeight; y++)
+        for (int y = 0; y < levelNewMap.GetLength(0); y++)
         {
-            for (int x = 0; x < oldWidth; x++)
+            for (int x = 0; x < levelNewMap.GetLength(1); x++)
             {
-                Vector3 position = new Vector3((oldWidth + x) * tileSize, -y * tileSize, 0); 
-                PlaceTile(levelNewMap[y, x], position);
+                Vector3 originalPosition = new Vector3(x * tileSize, -y * tileSize, 0);
+                Vector3 mirroredHorizontalPosition = new Vector3((-x) * tileSize, -y * tileSize, 0);
+                PlaceTile(levelNewMap[y, x], mirroredHorizontalPosition);
+
+                Vector3 mirroredVerticalPosition = new Vector3(x * tileSize, (y) * tileSize, 0);
+                PlaceTile(levelNewMap[y, x], mirroredVerticalPosition);
             }
         }
     }
@@ -104,4 +105,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
 }
+
+
+
 

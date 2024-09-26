@@ -42974,7 +42974,7 @@ MonoBehaviour:
   pelletPrefab: {fileID: 4829655970718958457, guid: d50bd7231296ded4fbf0d0f510219308, type: 3}
   powerPelletPrefab: {fileID: 3797793184025426340, guid: 8fbdd82357d8d4d4f9305deea097cc45, type: 3}
   tJunctionPrefab: {fileID: 8351730333469441566, guid: bf9e3cf780ef54940b40ec74855c52f4, type: 3}
-  tileSize: 2
+  tileSize: 3
 --- !u!4 &2141609424
 Transform:
   m_ObjectHideFlags: 0
