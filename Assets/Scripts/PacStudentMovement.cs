@@ -32,13 +32,13 @@ public class PacStudentMovement : MonoBehaviour
     void MovePacStudent()
     {
         // Move PacStudent towards the current target corner
-        transform.position = Vector3.MoveTowards(transform.position, corners[currentTarget], moveSpeed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, corners[currentTarget], moveSpeed * Time.deltaTime);
 
         // If PacStudent reaches the corner, move to the next one
-        if (Vector3.Distance(transform.position, corners[currentTarget]) < 0.1f)
-        {
-            currentTarget = (currentTarget + 1) % corners.Length;
-        }
+        //if (Vector3.Distance(transform.position, corners[currentTarget]) < 0.1f)
+        //{
+            //currentTarget = (currentTarget + 1) % corners.Length;
+        //}
     }
 
     void PlayMovementAnimationAndAudio()

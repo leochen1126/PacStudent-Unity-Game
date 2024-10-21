@@ -15,7 +15,7 @@ public class GhostMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        PickRandomDirection();
+        //PickRandomDirection();
     }
 
     void Update()
@@ -29,7 +29,7 @@ public class GhostMovement : MonoBehaviour
             timeSinceLastChange += Time.deltaTime;
             if (timeSinceLastChange >= directionChangeInterval)
             {
-                PickRandomDirection();
+                //PickRandomDirection();
                 timeSinceLastChange = 0f;
             }
         }
