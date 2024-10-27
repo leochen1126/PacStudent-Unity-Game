@@ -7,11 +7,11 @@ public class StartSceneManager : MonoBehaviour
 {
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("Assessment3Scene");  // Replace with your Assessment 3 scene name
+        SceneManager.LoadScene("SampleScene"); 
     }
 
     public void LoadLevel2()
     {
-        SceneManager.LoadScene("DesignIterationScene");  // Replace with your Design Iteration scene name
+        SceneManager.LoadScene("DesignIterationScene");  
     }
 }
