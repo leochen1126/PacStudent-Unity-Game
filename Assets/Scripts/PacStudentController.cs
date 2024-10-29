@@ -10,11 +10,12 @@ public class PacStudentController : MonoBehaviour
     private bool isMoving = false;
     private Vector2 lastInput;
     private Vector2 currentInput;
-
+    private AudioSource walkAudio;
     void Start()
     {
         gridPosition = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
         targetPosition = transform.position;
+        walkAudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -59,6 +60,7 @@ public class PacStudentController : MonoBehaviour
             {
                 gridPosition = Vector2Int.RoundToInt(targetPosition);
                 isMoving = false;
+                walkAudio.Stop();
             }
         }
     }
@@ -67,6 +69,8 @@ public class PacStudentController : MonoBehaviour
     {
         targetPosition = new Vector2(nextGridPosition.x, nextGridPosition.y);
         isMoving = true;
+        if (!walkAudio.isPlaying) 
+            walkAudio.Play();
     }
 
     private bool IsWalkable(Vector2Int gridPos)

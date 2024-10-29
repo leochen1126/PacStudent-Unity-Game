@@ -36,11 +36,28 @@ public class CherryController : MonoBehaviour
 
     private Vector2 GetRandomSpawnPosition()
     {
-        float x = Random.Range(-10f, 10f);  // Adjust based on camera size
-        float y = Random.Range(-10f, 10f);
-        if (Random.value > 0.5f) x = x > 0 ? 10f : -10f;
-        else y = y > 0 ? 10f : -10f;
+        Vector2 spawnPosition = Vector2.zero;
+        float cameraHeight = Camera.main.orthographicSize * 2;
+        float cameraWidth = cameraHeight * Camera.main.aspect;
 
-        return new Vector2(x, y);
+        int side = Random.Range(0, 4);  // Choose a random side: 0 = left, 1 = right, 2 = top, 3 = bottom
+
+        switch (side)
+        {
+            case 0:  // Left
+                spawnPosition = new Vector2(-cameraWidth / 2 - 1, Random.Range(-cameraHeight / 2, cameraHeight / 2));
+                break;
+            case 1:  // Right
+                spawnPosition = new Vector2(cameraWidth / 2 + 1, Random.Range(-cameraHeight / 2, cameraHeight / 2));
+                break;
+            case 2:  // Top
+                spawnPosition = new Vector2(Random.Range(-cameraWidth / 2, cameraWidth / 2), cameraHeight / 2 + 1);
+                break;
+            case 3:  // Bottom
+                spawnPosition = new Vector2(Random.Range(-cameraWidth / 2, cameraWidth / 2), -cameraHeight / 2 - 1);
+                break;
+        }
+
+        return spawnPosition;
     }
 }

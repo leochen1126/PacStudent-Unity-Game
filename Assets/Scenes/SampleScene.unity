@@ -7671,6 +7671,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1388789962213302227, guid: d50bd7231296ded4fbf0d0f510219308, type: 3}
   m_PrefabInstance: {fileID: 320283458}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323932700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323932702}
+  - component: {fileID: 323932701}
+  m_Layer: 0
+  m_Name: CherrySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &323932701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323932700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc918a7fe495014a8ad52931b58a23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cherryPrefab: {fileID: 2423006231708462298, guid: 718f53c73f626dd46b6d6200b431a503, type: 3}
+  spawnInterval: 5
+  cherrySpeed: 3
+--- !u!4 &323932702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323932700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.504013, y: -8.196985, z: 5.695148}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &326235694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38879,6 +38926,7 @@ GameObject:
   - component: {fileID: 1821587631}
   - component: {fileID: 1821587634}
   - component: {fileID: 1821587635}
+  - component: {fileID: 1821587636}
   m_Layer: 0
   m_Name: PacStudent
   m_TagString: Untagged
@@ -39001,8 +39049,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7a186e601398bda408a8d56a5e8e2e11, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7a186e601398bda408a8d56a5e8e2e11, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -39088,6 +39136,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1821587636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821587630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77f0b692121a004ca59f23501e25dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  gridPosition: {x: 0, y: 0}
 --- !u!1001 &1824254015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44979,3 +45041,4 @@ SceneRoots:
   - {fileID: 103306638}
   - {fileID: 1171738041}
   - {fileID: 1305916768}
+  - {fileID: 323932702}
