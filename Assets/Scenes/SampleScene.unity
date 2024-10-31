@@ -9578,6 +9578,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2893266267304037737, guid: 1100a580d1c977541b8e6cc6e83b9a36, type: 3}
   m_PrefabInstance: {fileID: 419670934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &420932226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420932228}
+  - component: {fileID: 420932227}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &420932227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420932226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39996c25657b26640b2fa2bc8e7bde07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownText: {fileID: 0}
+  gameTimerText: {fileID: 0}
+--- !u!4 &420932228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420932226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7121649, y: -8.079669, z: 5.670964}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &422328309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25712,6 +25758,7 @@ GameObject:
   - component: {fileID: 1159397015}
   - component: {fileID: 1159397019}
   - component: {fileID: 1159397018}
+  - component: {fileID: 1159397020}
   m_Layer: 0
   m_Name: Ghost1
   m_TagString: Untagged
@@ -25838,6 +25885,18 @@ MonoBehaviour:
   moveSpeed: 2
   directionChangeInterval: 1
   canMove: 1
+--- !u!114 &1159397020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159397014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7007884251ded1d44984414cda6ebd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1159468540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28038,6 +28097,7 @@ GameObject:
   - component: {fileID: 1248908510}
   - component: {fileID: 1248908514}
   - component: {fileID: 1248908513}
+  - component: {fileID: 1248908515}
   m_Layer: 0
   m_Name: Ghost3
   m_TagString: Untagged
@@ -28164,6 +28224,18 @@ MonoBehaviour:
   moveSpeed: 2
   directionChangeInterval: 1
   canMove: 1
+--- !u!114 &1248908515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248908509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7007884251ded1d44984414cda6ebd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1249270992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31448,6 +31520,7 @@ GameObject:
   - component: {fileID: 1434504741}
   - component: {fileID: 1434504745}
   - component: {fileID: 1434504744}
+  - component: {fileID: 1434504746}
   m_Layer: 0
   m_Name: Ghost4
   m_TagString: Untagged
@@ -31574,6 +31647,18 @@ MonoBehaviour:
   moveSpeed: 2
   directionChangeInterval: 1
   canMove: 1
+--- !u!114 &1434504746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434504740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7007884251ded1d44984414cda6ebd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1436832760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42836,6 +42921,7 @@ GameObject:
   - component: {fileID: 2038175751}
   - component: {fileID: 2038175755}
   - component: {fileID: 2038175754}
+  - component: {fileID: 2038175756}
   m_Layer: 0
   m_Name: Ghost2
   m_TagString: Untagged
@@ -42962,6 +43048,18 @@ MonoBehaviour:
   moveSpeed: 2
   directionChangeInterval: 1
   canMove: 1
+--- !u!114 &2038175756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038175750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7007884251ded1d44984414cda6ebd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2044289606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45077,3 +45175,4 @@ SceneRoots:
   - {fileID: 1171738041}
   - {fileID: 1305916768}
   - {fileID: 323932702}
+  - {fileID: 420932228}
