@@ -73,6 +73,16 @@ public class PacStudentController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         UpdateUI();
         animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator component not found on PacStudent!");
+        }
+        else
+        {
+            // Test if parameters exist by setting them
+            animator.SetFloat("MoveX", 0);
+            animator.SetFloat("MoveY", 0);
+        }
     }
     void UpdateAnimation()
     {
@@ -86,12 +96,14 @@ public class PacStudentController : MonoBehaviour
         UpdateAnimation();
     }
 
+
     private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.W)) lastInput = Vector2.up;
         else if (Input.GetKeyDown(KeyCode.S)) lastInput = Vector2.down;
         else if (Input.GetKeyDown(KeyCode.A)) lastInput = Vector2.left;
         else if (Input.GetKeyDown(KeyCode.D)) lastInput = Vector2.right;
+
     }
     void UpdateUI()
     {
@@ -113,16 +125,14 @@ public class PacStudentController : MonoBehaviour
             Vector2Int nextGridPosition = gridPosition + Vector2Int.RoundToInt(lastInput);
             if (IsWalkable(nextGridPosition))
             {
-                currentInput = lastInput;
+                Debug.Log("Moving PacStudent to " + nextGridPosition);
                 StartMoving(nextGridPosition);
             }
             else
             {
-                nextGridPosition = gridPosition + Vector2Int.RoundToInt(currentInput);
-                if (IsWalkable(nextGridPosition))
-                {
-                    StartMoving(nextGridPosition);
-                }
+                Debug.Log("Blocked by wall at " + nextGridPosition);
+                animator.SetFloat("MoveX", 0);
+                animator.SetFloat("MoveY", 0);
             }
         }
         else
@@ -134,7 +144,7 @@ public class PacStudentController : MonoBehaviour
             {
                 gridPosition = Vector2Int.RoundToInt(targetPosition);
                 isMoving = false;
-                walkAudio.Stop();
+                Debug.Log("Reached target position: " + gridPosition);
             }
         }
     }
