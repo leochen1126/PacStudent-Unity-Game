@@ -22,6 +22,7 @@ public class PacStudentController : MonoBehaviour
     public ParticleSystem wallCollisionEffect;
     public AudioClip wallCollisionSound;
     private AudioSource audioSource;
+    private Animator animator;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Wall"))
@@ -71,12 +72,18 @@ public class PacStudentController : MonoBehaviour
         walkAudio = GetComponent<AudioSource>();
         audioSource = GetComponent<AudioSource>();
         UpdateUI();
+        animator = GetComponent<Animator>();
     }
-
+    void UpdateAnimation()
+    {
+        animator.SetFloat("MoveX", lastInput.x);
+        animator.SetFloat("MoveY", lastInput.y);
+    }
     void Update()
     {
         HandleInput();
         MovePacStudent();
+        UpdateAnimation();
     }
 
     private void HandleInput()
