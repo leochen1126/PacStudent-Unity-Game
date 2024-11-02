@@ -11124,7 +11124,7 @@ GameObject:
   - component: {fileID: 487959914}
   m_Layer: 0
   m_Name: Top-left
-  m_TagString: Level
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12454,7 +12454,7 @@ GameObject:
   - component: {fileID: 529208104}
   m_Layer: 0
   m_Name: Top-right
-  m_TagString: Level
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25760,6 +25760,7 @@ GameObject:
   - component: {fileID: 1159397018}
   - component: {fileID: 1159397020}
   - component: {fileID: 1159397021}
+  - component: {fileID: 1159397022}
   m_Layer: 0
   m_Name: Ghost1
   m_TagString: Ghost
@@ -25919,6 +25920,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5625, y: 0.75, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1159397022
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159397014}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1159468540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27052,7 +27080,7 @@ GameObject:
   - component: {fileID: 1195695747}
   m_Layer: 0
   m_Name: bottum-left (1)
-  m_TagString: Level
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28121,6 +28149,7 @@ GameObject:
   - component: {fileID: 1248908513}
   - component: {fileID: 1248908515}
   - component: {fileID: 1248908516}
+  - component: {fileID: 1248908517}
   m_Layer: 0
   m_Name: Ghost3
   m_TagString: Ghost
@@ -28280,6 +28309,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5625, y: 0.75, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1248908517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248908509}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1249270992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31588,6 +31644,7 @@ GameObject:
   - component: {fileID: 1434504744}
   - component: {fileID: 1434504746}
   - component: {fileID: 1434504747}
+  - component: {fileID: 1434504748}
   m_Layer: 0
   m_Name: Ghost4
   m_TagString: Ghost
@@ -31747,6 +31804,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5625, y: 0.75, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1434504748
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434504740}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1436832760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32519,7 +32603,7 @@ GameObject:
   - component: {fileID: 1463454785}
   m_Layer: 0
   m_Name: buttum-right (1)
-  m_TagString: Level
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39378,7 +39462,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.84375, y: 0.625, z: 0.2}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1824254015
 PrefabInstance:
@@ -42115,6 +42199,7 @@ GameObject:
   - component: {fileID: 1993365202}
   - component: {fileID: 1993365201}
   - component: {fileID: 1993365204}
+  - component: {fileID: 1993365205}
   m_Layer: 0
   m_Name: PowerPellet
   m_TagString: Power
@@ -42234,6 +42319,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.59375, y: 0.4375, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1993365205
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993365200}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2002455297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43055,6 +43167,7 @@ GameObject:
   - component: {fileID: 2038175754}
   - component: {fileID: 2038175756}
   - component: {fileID: 2038175757}
+  - component: {fileID: 2038175758}
   m_Layer: 0
   m_Name: Ghost2
   m_TagString: Ghost
@@ -43214,6 +43327,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5625, y: 0.75, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2038175758
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038175750}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2044289606
 PrefabInstance:
   m_ObjectHideFlags: 0

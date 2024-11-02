@@ -27,14 +27,17 @@ public class PacStudentController : MonoBehaviour
     {
         if (other.CompareTag("Wall"))
         {
+            Debug.LogError("PacStudent collided with a wall");
             HandleWallCollision();
         }
         else if (other.CompareTag("Pellet"))
         {
+            Debug.Log("Pellet");
             HandlePelletCollision(other.gameObject);
         }
         else if (other.CompareTag("Cherry"))
         {
+            Debug.Log("cherry");
             HandleCherryCollision(other.gameObject);
         }
         if (other.CompareTag("Teleporter"))
