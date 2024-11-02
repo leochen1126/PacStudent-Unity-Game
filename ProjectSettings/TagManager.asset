@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Level
+  - Cherry
+  - Power
+  - Ghost
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -86,8 +86,34 @@ public class PacStudentController : MonoBehaviour
     }
     void UpdateAnimation()
     {
-        animator.SetFloat("MoveX", lastInput.x);
-        animator.SetFloat("MoveY", lastInput.y);
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            lastInput = Vector2.up;
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            lastInput = Vector2.down;
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            lastInput = Vector2.left;
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            lastInput = Vector2.right;
+        }
+
+        // Update Animation
+        if (animator != null)  // Ensure animator is not null
+        {
+            animator.SetFloat("MoveX", lastInput.x);
+            animator.SetFloat("MoveY", lastInput.y);
+        }
+    
+    }
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
