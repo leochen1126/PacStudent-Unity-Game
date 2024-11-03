@@ -23,6 +23,7 @@ public class PacStudentController : MonoBehaviour
     public AudioClip wallCollisionSound;
     private AudioSource audioSource;
     private Animator animator;
+    private GameUIManager gameUIManager;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Wall"))
@@ -76,6 +77,7 @@ public class PacStudentController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         UpdateUI();
         animator = GetComponent<Animator>();
+        gameUIManager = FindObjectOfType<GameUIManager>();
         if (animator == null)
         {
             Debug.LogError("Animator component not found on PacStudent!");
@@ -86,6 +88,7 @@ public class PacStudentController : MonoBehaviour
             animator.SetFloat("MoveX", 0);
             animator.SetFloat("MoveY", 0);
         }
+
     }
     void UpdateAnimation()
     {
@@ -120,6 +123,7 @@ public class PacStudentController : MonoBehaviour
     }
     void Update()
     {
+        if (!gameUIManager.gameStarted) return;
         HandleInput();
         MovePacStudent();
         UpdateAnimation();
