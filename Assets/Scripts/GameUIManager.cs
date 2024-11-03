@@ -8,7 +8,7 @@ public class GameUIManager : MonoBehaviour
     public Text countdownText;
     public Text gameTimerText;
     public Text gameOverText; // For displaying "Game Over"
-    public AudioSource backgroundMusic; // Background music audio source
+    public AudioSource backgroundMusic;
     private float gameTime;
     public bool gameStarted = false;
 
@@ -27,8 +27,7 @@ public class GameUIManager : MonoBehaviour
 
     void StartGame()
     {
-        // Enable player and ghost movement by setting necessary flags in your player and ghost scripts.
-
+        
         // Start background music if it¡¦s assigned
         if (backgroundMusic != null)
         {
