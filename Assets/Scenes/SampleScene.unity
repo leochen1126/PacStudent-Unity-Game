@@ -3062,7 +3062,7 @@ GameObject:
   - component: {fileID: 149988700}
   - component: {fileID: 149988699}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Ghost2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9612,10 +9612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39996c25657b26640b2fa2bc8e7bde07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownText: {fileID: 0}
-  gameTimerText: {fileID: 0}
+  countdownText: {fileID: 1340887128}
+  gameTimerText: {fileID: 613131810}
   gameOverText: {fileID: 0}
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 263274446}
   gameStarted: 0
 --- !u!4 &420932228
 Transform:
@@ -16974,7 +16974,7 @@ GameObject:
   - component: {fileID: 738338718}
   - component: {fileID: 738338717}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Ghost3Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32426,7 +32426,7 @@ GameObject:
   - component: {fileID: 1449184758}
   - component: {fileID: 1449184757}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Ghost1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42021,7 +42021,7 @@ GameObject:
   - component: {fileID: 1983822441}
   - component: {fileID: 1983822440}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Ghost4Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

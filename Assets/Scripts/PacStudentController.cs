@@ -123,7 +123,6 @@ public class PacStudentController : MonoBehaviour
     }
     void Update()
     {
-        if (!gameUIManager.gameStarted) return;
         HandleInput();
         MovePacStudent();
         UpdateAnimation();
@@ -192,8 +191,6 @@ public class PacStudentController : MonoBehaviour
 
     private bool IsWalkable(Vector2Int gridPos)
     {
-        // Check against levelMap in LevelGenerator to see if gridPos is walkable
-        // This should be customized based on your level's grid structure
         return true;
     }
 }

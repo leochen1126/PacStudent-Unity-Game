@@ -1,29 +1,42 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
-
 
 public class GameUIManager : MonoBehaviour
 {
     public Text countdownText;
     public Text gameTimerText;
+    public Text gameOverText; // For displaying "Game Over"
+    public AudioSource backgroundMusic; // Background music audio source
     private float gameTime;
     public bool gameStarted = false;
 
     void Start()
     {
+        gameOverText.gameObject.SetActive(false); // Hide Game Over text initially
         StartCoroutine(RoundStartCountdown());
+        gameStarted = true;
+        InvokeRepeating("UpdateGameTimer", 0f, 0.1f);
     }
-
+    private void Awake()
+    {
+        gameStarted = true;
+        InvokeRepeating("UpdateGameTimer", 0f, 0.1f);
+    }
 
     void StartGame()
     {
-        // Enable player and ghost movement by setting necessary flags
-        // Start background music for ghosts
-        InvokeRepeating("UpdateGameTimer", 0f, 0.1f);
+        // Enable player and ghost movement by setting necessary flags in your player and ghost scripts.
+
+        // Start background music if it¡¦s assigned
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true;
+            backgroundMusic.Play();
+        }
+
+        InvokeRepeating("UpdateGameTimer", 0f, 0.1f); // Start game timer
     }
 
     void UpdateGameTimer()
@@ -33,11 +46,9 @@ public class GameUIManager : MonoBehaviour
         gameTime += Time.deltaTime;
         int minutes = Mathf.FloorToInt(gameTime / 60F);
         int seconds = Mathf.FloorToInt(gameTime % 60F);
-        int milliseconds = Mathf.FloorToInt((gameTime * 100F) % 100F);
+        int milliseconds = Mathf.FloorToInt((gameTime * 60F) % 60F);
         gameTimerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
     }
-
-
 
     IEnumerator RoundStartCountdown()
     {
@@ -56,17 +67,15 @@ public class GameUIManager : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         countdownText.gameObject.SetActive(false);
-        gameStarted = true; // Mark the game as started
+        gameStarted = true; // Set this to true before starting the timer
         StartGame();
     }
-
-
-
-
 
     public void GameOver(int finalScore, float finalTime)
     {
         CancelInvoke("UpdateGameTimer");  // Stop the timer
+        gameStarted = false; // Prevent further movement or actions
+
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         float bestTime = PlayerPrefs.GetFloat("BestTime", float.MaxValue);
 
@@ -77,13 +86,14 @@ public class GameUIManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
+        // Display Game Over text
+        gameOverText.gameObject.SetActive(true);
         StartCoroutine(ShowGameOverScreen());
     }
 
     IEnumerator ShowGameOverScreen()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("StartScene"); // Return to Start Scene after 3 seconds
     }
 }
-
